@@ -176,4 +176,22 @@
   padding: 20px;
   padding-bottom: 175px;
   width: 100%;
+  color: white;
+}
+
+/* Filter button */
+
+.filter-button {
+  padding: 7px;
+  border-radius: 10px;
+  border: solid 1px white;
+}
+
+.filter-button h4 {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.filter-button-container {
+  display: flex;
 }
