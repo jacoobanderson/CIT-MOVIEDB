@@ -87,7 +87,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align:left;
 }
 
 .trending-title-container {
@@ -126,4 +125,31 @@
 
 .wide-movie-card-text h4, p {
   font-size: 0.8rem;
+}
+
+/* Movie card */
+
+.movie-card {
+  height: 275px;
+  width: calc(930px / 5 - 8px);
+  background-size: cover;
+  border-radius: 8px;
+}
+
+/* Movie section */
+
+.movie-section-content {
+  display: flex;
+  gap: 10px;
+}
+
+.movie-section-title {
+  color: white;
+}
+
+.movie-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
