@@ -15,10 +15,15 @@ const Discover = () => {
     const popularMoviesJson = await response.json()
 
     setPopularMovies(popularMoviesJson)
-    setFilteredMovies(popularMoviesJson)
+    setFilteredMovies(popularMoviesJson.results)
   }
 
-  const filterMoviesByRating = () => {}
+  const filterMoviesByRating = () => {
+    const filtered = [...popularMovies.results]
+    filtered.sort((a, b) => b.vote_average - a.vote_average)
+    console.log(filtered)
+    setFilteredMovies(filtered)
+  }
 
   useEffect(() => {
     fetchPopularMovies()
@@ -30,17 +35,18 @@ const Discover = () => {
         <Searchbar />
         <h2>Discover</h2>
         <div className='filter-button-container'>
-          <FilterButton name='Filter by rating' />
+          <FilterButton filter={filterMoviesByRating}name='Filter by rating' />
         </div>
         <div className='discover-movie-container'>
-          {filteredMovies.results
-            ? filteredMovies.results.map((movie, index) => (
+          {filteredMovies
+            ? filteredMovies.map((movie, index) => (
                 <MovieCard
                   key={index}
                   title={movie.title}
                   image={
                     process.env.REACT_APP_API_IMAGE_URL + movie.poster_path
                   }
+                  rating={movie.vote_average}
                   year={movie.release_date.split("-")[0]}
                 />
               ))
