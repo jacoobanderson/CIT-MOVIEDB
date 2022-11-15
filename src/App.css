@@ -1,1 +1,41 @@
+/* Navigation */
 
+.navigation-container {
+  width: 300px;
+  height: 100%;
+  background-color: #171717;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.navigation-header {
+  position: absolute;
+  top: 0;
+}
+
+.navigation-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.navigation-links div {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-links img {
+  width: 20px;
+  height: 20px;
+  fill: #838383;
+}
+
+.navigation-links a {
+  color: #838383;
+  text-decoration: none;
+  padding: 1rem;
+}
