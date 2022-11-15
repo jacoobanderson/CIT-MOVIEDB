@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 
-const FilterButton = ({ name, filter }) => {
+const FilterButton = ({ name, filter, removeFilter }) => {
   const [active, setActive] = useState(false)
 
   const handleClick = () => {
     setActive(!active)
-    filter()
+    !active ? filter() : removeFilter()
   }
 
   return (

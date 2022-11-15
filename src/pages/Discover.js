@@ -21,8 +21,11 @@ const Discover = () => {
   const filterMoviesByRating = () => {
     const filtered = [...popularMovies.results]
     filtered.sort((a, b) => b.vote_average - a.vote_average)
-    console.log(filtered)
     setFilteredMovies(filtered)
+  }
+
+  const removeFilter = () => {
+    setFilteredMovies(popularMovies.results)
   }
 
   useEffect(() => {
@@ -35,7 +38,7 @@ const Discover = () => {
         <Searchbar />
         <h2>Discover</h2>
         <div className='filter-button-container'>
-          <FilterButton filter={filterMoviesByRating}name='Filter by rating' />
+          <FilterButton filter={filterMoviesByRating} removeFilter={removeFilter} name='Filter by rating' />
         </div>
         <div className='discover-movie-container'>
           {filteredMovies
