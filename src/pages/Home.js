@@ -27,9 +27,19 @@ const Home = () => {
     setPlayingMovies(playingMoviesJson)
   }
 
+  const fetchTopRatedMovies = async () => {
+    const response = await fetch(
+      `${process.env.REACT_APP_BASE_URL}movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}`
+    )
+    const topRatedMoviesJson = await response.json()
+
+    setTopRatedMovies(topRatedMoviesJson)
+  }
+
   useEffect(() => {
     fetchTrendingMovies()
     fetchPlayingMovies()
+    fetchTopRatedMovies()
   }, [])
 
   return (
@@ -67,6 +77,7 @@ const Home = () => {
           </div>
         </div>
         {playingMovies.results ? <MovieSection title={'Now Playing'} movies={playingMovies.results}/> : null}
+        {topRatedMovies.results ? <MovieSection title={'Top Rated'} movies={topRatedMovies.results}/> : null}
       </div>
     </div>
   )
