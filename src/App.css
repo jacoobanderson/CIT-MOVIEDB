@@ -79,3 +79,51 @@
   margin-left: 5px;
   width: 90%;
 }
+
+/* Wide movie card */
+
+.trending-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align:left;
+}
+
+.trending-title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  color: white;
+}
+
+.trending-movies-container {
+  display: flex;
+  gap: 30px;
+}
+.wide-movie-card {
+  width: 450px;
+  height: 275px;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 7px;
+}
+
+.wide-movie-card-text {
+  color: white;
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  padding: 13px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.wide-movie-card-text h4, p {
+  margin: 0;
+}
+
+.wide-movie-card-text h4, p {
+  font-size: 0.8rem;
+}
