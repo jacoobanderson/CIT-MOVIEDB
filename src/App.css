@@ -179,6 +179,14 @@
   color: white;
 }
 
+.discover-movie-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 50px;
+  row-gap: 15px;
+}
+
+
 /* Filter button */
 
 .filter-button {
