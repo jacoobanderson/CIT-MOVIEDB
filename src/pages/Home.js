@@ -76,8 +76,12 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {playingMovies.results ? <MovieSection title={'Now Playing'} movies={playingMovies.results}/> : null}
-        {topRatedMovies.results ? <MovieSection title={'Top Rated'} movies={topRatedMovies.results}/> : null}
+        {playingMovies.results ? (
+          <MovieSection title={"Now Playing"} movies={playingMovies.results} />
+        ) : null}
+        {topRatedMovies.results ? (
+          <MovieSection title={"Top Rated"} movies={topRatedMovies.results} />
+        ) : null}
       </div>
     </div>
   )

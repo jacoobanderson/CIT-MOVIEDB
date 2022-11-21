@@ -38,7 +38,11 @@ const Discover = () => {
         <Searchbar />
         <h2>Discover</h2>
         <div className='filter-button-container'>
-          <FilterButton filter={filterMoviesByRating} removeFilter={removeFilter} name='Filter by rating' />
+          <FilterButton
+            filter={filterMoviesByRating}
+            removeFilter={removeFilter}
+            name='Filter by rating'
+          />
         </div>
         <div className='discover-movie-container'>
           {filteredMovies
